@@ -28,6 +28,16 @@ void	error(typeerror er, Message mess)
 	exit(FOPEN);
 }
 
+template<typename N>
+N pow(N n, int power)
+{
+	if (power == 0)
+		return (1);
+	for (;power > 1; --power)
+		n *= n;
+	return (n);
+}
+
 struct t_data
 {
 	long	error_add;
